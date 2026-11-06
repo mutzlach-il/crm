@@ -2009,8 +2009,8 @@ function sharedAppsCard(){const by=new Map();
 /* =====================================================================
    קישור קבוע + ענן כמקור יחיד + בדיקת מערכת + גיבויים + אוטומציה בלי קלוד
    ===================================================================== */
-const HOSTED=/github\.io$/.test(location.hostname)||/[?&]hosted=1/.test(location.search);
-const CRM_LINK='https://mutzlach-il.github.io/crm/';
+const HOSTED=/(^|\.)github\.io$|(^|\.)bonehsystems\.co\.il$/.test(location.hostname)||/[?&]hosted=1/.test(location.search);
+const CRM_LINK=(/(^|\.)bonehsystems\.co\.il$/.test(location.hostname)?location.origin:'https://mutzlach-il.github.io')+'/crm/';
 const SYS={hb:null,ingestOk:null,backups:null,lastBackup:null,lastSync:null,test:null,testing:false,starting:false};
 
 /* בגרסה המקוונת לא שומרים שום נתון בדפדפן – הכול בענן בלבד */
